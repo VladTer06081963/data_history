@@ -40,9 +40,12 @@ app.get("/", (req, res) => {
   res.render("index", { events });
 });
 
-app.get("/ru", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "ru.html"));
+app.get("/task", (req, res) => {
+  res.render("task");
 });
+// app.get("/ru", (req, res) => {
+//   res.sendFile(path.join(__dirname, "public", "ru.html"));
+// });
 
 app.get("/admin", (req, res) => {
   const events = readEvents();

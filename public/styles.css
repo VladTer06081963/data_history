@@ -23,13 +23,13 @@ th {
 }
 
 a {
-  color: #007bff;
+  color: #82888d;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #e1e124;
+  color: #050606;
   cursor: pointer;
 }
 
@@ -52,12 +52,13 @@ textarea {
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color:#82888d; 
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  cursor: pointer;
+  background-color: #050606;
 }
