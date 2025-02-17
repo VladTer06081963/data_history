@@ -1,0 +1,14 @@
+extends ../layouts/layout
+
+block content
+    h1= event ? 'Редактировать событие' : 'Добавить событие'
+    form(method="POST", action=event ? `/admin/edit/${event.id}` : "/admin/add")
+        label(for="day") День:
+        input(type="number", name="day", value=event ? event.day : '', required)
+        label(for="month") Месяц:
+        input(type="number", name="month", value=event ? event.month : '', required)
+        label(for="year") Год:
+        input(type="number", name="year", value=event ? event.year : '', required)
+        label(for="description") Описание:
+        textarea(name="description", required)= event ? event.description : ''
+        button(type="submit")= event ? 'Обновить' : 'Добавить'

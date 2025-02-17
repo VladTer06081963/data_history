@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block content
+    h1 Исторические события на сегодня
+    table
+        thead
+            tr
+                th Год
+                th Событие
+        tbody
+            each event in events
+                tr
+                    td= event.year
+                    td= event.description

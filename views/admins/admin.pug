@@ -1,0 +1,24 @@
+extends ../layouts/layout
+
+block content
+    h1.text-center.text-3xl Летописец
+    a(href="/admin/add") Добавить событие
+    table
+        thead
+            tr
+                th День
+                th Месяц
+                th Год
+                th Событие
+                th Действия
+        tbody
+            each event in events
+                tr
+                    td= event.day
+                    td= event.month
+                    td= event.year
+                    td= event.description
+                    td
+                        a(href=`/admin/edit/${event.id}`) Редактировать
+                        |  
+                        a(href=`/admin/delete/${event.id}`) Удалить
