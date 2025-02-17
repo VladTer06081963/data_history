@@ -43,14 +43,12 @@ app.get("/", (req, res) => {
 app.get("/task", (req, res) => {
   res.render("task");
 });
-// app.get("/ru", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public", "ru.html"));
-// });
 
 app.get("/admin", (req, res) => {
   const events = readEvents();
   res.render("admins/admin", { events });
 });
+
 app.get("/admin/add", (req, res) => {
   res.render("admins/edit", { event: null });
 });
